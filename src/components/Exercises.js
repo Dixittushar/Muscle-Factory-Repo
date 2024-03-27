@@ -7,7 +7,7 @@ import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExerciseCard from "./ExerciseCard";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
-  // console.log(exercises);
+  console.log(exercises);
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
   const indexOfLastExercise = currentPage * exercisesPerPage;
@@ -23,9 +23,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   };
   return (
     <Box id="exercises" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
-      <Typography variant="h3" mb="46px">
-        Showing Results
-      </Typography>
+      {exercises.length > 0 && (
+        <Typography variant="h3" mb="46px">
+          Showing Results
+        </Typography>
+      )}
+
       <Stack
         direction="row"
         sx={{ gap: { lg: "110px", xs: "50px" } }}
