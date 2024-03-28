@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
 2. Navigate to the project directory:
 
    ```bash
-   cd gym-exercise
+   cd muscle-factory
    ```
 
 3. Install the required dependencies:
